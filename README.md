@@ -41,9 +41,11 @@ $ ./pharo Pharo.image ../introduceBug.st --save
 
 Run tests again and see that this accessor produced 16 errors:
 
+```bash
 $ ./pharo Pharo.image test "Pillar.*"
 [...]
 3182 run, 3166 passes, 0 failures, 16 errors
+```
 
 ### Bug Symptoms
 
@@ -64,6 +66,7 @@ The error is caused because outputType is nil. But we have no clue about the rel
 
 Alternatives to reproduce the issue:
 
+```smalltalk
 PRExportBuilder new
 	createConfiguration: 'pillar.conf' 
 	baseDirectory:  FileSystem workingDirectory   
@@ -72,6 +75,7 @@ PRExportBuilder new
 		'defaultExporters' -> {'latex'}
 		} asDictionary;
 	export
+```
 
 ## Bug Alternative 2
 
@@ -85,9 +89,11 @@ $ ./pharo Pharo.image ../introduceBugAlternative.st --save
 
 Run tests again and see that this accessor produced 7 errors:
 
+```bash
 $ ./pharo Pharo.image test "Pillar.*"
 [...]
 3182 run, 3175 passes, 0 failures, 7 errors.
+```
 
 ### Bug Symptoms
 
