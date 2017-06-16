@@ -1,9 +1,9 @@
-#Pillar-Bug
+# Pillar-Bug
 
 This repository explains how to reproduce a hard-to debug pillar bug due to the strange semantics of Pillar configurations.
 The configuration of a pillar project uses `doesNotUnderstand:` and the Magritte meta-description framework to control how a configuration should be serialized and deserialized into text among others. This combination has strange semantics that produce hard-to-debug errors.. 
 
-##Setting up the Bug Environment
+## Setting up the Bug Environment
 
 Clone this repository
 
