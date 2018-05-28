@@ -15,8 +15,8 @@ cd pillar-bug
 Install stable Pillar version
 
 ```bash
-$ git clone https://github.com/pillar-markup/ToHack
-$ cd ToHack
+$ git clone https://github.com/pillar-markup/pillar
+$ cd pillar
 $ ./download.sh
 ````
 
@@ -36,7 +36,7 @@ Introduce in PRPillarConfiguration a disabledPhases instance variable + accessor
 (You can do it with the script in this repository)
 
 ```bash
-$ ./pharo Pharo.image ../introduceBug.st --save
+$ ./pharo Pharo.image ../introduceBug.st --save --quit
 ```
 
 Run tests again and see that this accessor produced 16 errors:
@@ -84,7 +84,7 @@ PRExportBuilder new
 We can introduce the bug using a different version of the `disabledPhases` accessors, using the properties mechanism in the configuration.
 
 ```bash
-$ ./pharo Pharo.image ../introduceBugAlternative.st --save
+$ ./pharo Pharo.image ../introduceBugAlternative.st --save --quit
 ```
 
 Run tests again and see that this accessor produced 7 errors:
